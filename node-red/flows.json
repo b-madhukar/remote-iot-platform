@@ -1,0 +1,95 @@
+[
+    {
+        "id": "027c8e57379f62d8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "23e820e030fc2046",
+        "type": "mqtt in",
+        "z": "027c8e57379f62d8",
+        "name": "",
+        "topic": "home/env/data",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "46a92aa172eb656a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "eb18d4aada398b48"
+            ]
+        ]
+    },
+    {
+        "id": "a4d9878532bda0c8",
+        "type": "debug",
+        "z": "027c8e57379f62d8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 710,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "eb18d4aada398b48",
+        "type": "json",
+        "z": "027c8e57379f62d8",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "a4d9878532bda0c8"
+            ]
+        ]
+    },
+    {
+        "id": "46a92aa172eb656a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
