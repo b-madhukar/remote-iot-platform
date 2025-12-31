@@ -1,6 +1,6 @@
 # Remote IoT Platform - v1.0
 
-## Project Overview
+## Project Overview 
 This is a **remote-ready IoT data ingestion platform** built with ESP32, MQTT, and Node-RED.  
 Current milestone (v1.0) shows basic MQTT-to-Node-RED data flow.
 
